@@ -1,0 +1,18 @@
+{
+  "name": "EcoQorgau — экологический контроль Каспия",
+  "short_name": "EcoQorgau",
+  "description": "Сообщения жителей, карта рисков и оперативная работа экологических служб в одной платформе.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f0e7",
+  "theme_color": "#073d35",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "/ecoqorgau-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

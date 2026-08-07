@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "SAQSHY AI",
+    "slug": "saqshy-ai-mobile-ios",
+    "version": "1.0.1",
+    "scheme": "saqshy",
+    "orientation": "portrait",
+    "icon": "./assets/saqshy-icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#06152B",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "kz.saqshy.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Камера нужна для фиксации экологических нарушений.",
+        "NSLocationWhenInUseUsageDescription": "Геопозиция подтверждает место экологического сигнала.",
+        "NSPhotoLibraryUsageDescription": "Доступ нужен для выбора фотографии экологического сигнала."
+      }
+    },
+    "android": {
+      "package": "kz.saqshy.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#06152B",
+        "foregroundImage": "./assets/saqshy-icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Разрешите выбрать фотографию экологического сигнала.",
+          "cameraPermission": "Разрешите сделать фотографию экологического сигнала."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Разрешите определить место экологического сигнала."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#06152B",
+          "image": "./assets/saqshy-splash.png",
+          "imageWidth": 220,
+          "resizeMode": "contain"
+        }
+      ]
+    ]
+  }
+}

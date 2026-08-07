@@ -1,0 +1,57 @@
+{
+  "name": "ecoqorgau",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PWA-платформа общественного экологического контроля Каспийского моря",
+  "author": "EcoQorgau Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13.0 <25",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "install:ci": "npm ci --no-audit --no-fund",
+    "dev": "vite",
+    "build": "npm run build:portable && npm run validate:portable",
+    "start": "vinext start",
+    "build:portable": "vinext build",
+    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test:html": "node --test tests/rendered-html.test.mjs",
+    "validate:artifact": "npm run validate:portable",
+    "validate:portable": "node scripts/validate-artifact.mjs",
+    "lint": "npm run lint:portable",
+    "lint:portable": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .sites-runtime --ignore-pattern .wrangler",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run lint:portable && npm run typecheck && npm run build:portable && npm run validate:portable && npm run test:html",
+    "audit": "npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.51.0",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/leaflet": "^1.9.20",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "react-server-dom-webpack": "19.2.8",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.2.1",
+    "wrangler": "4.119.0"
+  },
+  "overrides": {
+    "undici": "7.29.0"
+  },
+  "type": "module",
+  "displayName": "EcoQorgau"
+}

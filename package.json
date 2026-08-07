@@ -1,0 +1,27 @@
+{
+  "name": "ecoqorgau-saqshy-hackathon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub-ready Caspian Hackathon repository: EcoQorgau web platform and SAQSHY AI Expo iOS app",
+  "engines": {
+    "node": ">=22.13.0 <25",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "postinstall": "npm run setup",
+    "setup": "npm run setup:web && npm run setup:mobile",
+    "setup:web": "npm --prefix web ci --no-audit --no-fund",
+    "setup:mobile": "npm --prefix mobile ci --no-audit --no-fund",
+    "verify": "npm run verify:web && npm run verify:mobile",
+    "verify:web": "npm --prefix web run verify",
+    "verify:mobile": "npm --prefix mobile run verify",
+    "audit": "npm --prefix web run audit && npm --prefix mobile run audit",
+    "build": "npm --prefix web run build",
+    "dev": "npm run dev:web",
+    "dev:web": "npm --prefix web run dev",
+    "start": "npm run build && npm --prefix web run start",
+    "start:web": "npm run dev:web",
+    "start:mobile": "npm --prefix mobile run start:clear",
+    "start:mobile:tunnel": "npm --prefix mobile run start:tunnel"
+  }
+}
