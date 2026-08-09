@@ -1,5 +1,5 @@
 {
   "buildCommand": "npm run build:portable",
-  "outputDirectory": "dist",
+  "outputDirectory": ".sites-runtime",
   "installCommand": "npm ci"
 }
