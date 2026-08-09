@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd web && npm run build:portable",
-  "outputDirectory": "web/dist",
+  "buildCommand": "npm run build:portable",
+  "outputDirectory": "dist",
   "installCommand": "npm ci"
 }
